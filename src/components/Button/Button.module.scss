@@ -1,0 +1,125 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  min-width: 100px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border: 1px solid transparent;
+  background-color: #fff;
+
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 1.6rem;
+
+  user-select: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  + .wrapper {
+    margin-left: 16px;
+  }
+
+  &.disabled {
+    opacity: 0.3;
+
+    &:hover {
+      pointer-events: none;
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  line-height: 1;
+}
+
+.icon + .title,
+.title + .icon {
+  margin-left: 8px;
+}
+
+//Button type
+
+.rounded {
+  min-height: 28px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-color: rgba(22, 24, 35, 0.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  &:hover {
+    border-color: rgba(22, 24, 35, 0.3);
+  }
+}
+
+.primary {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 700;
+  border-color: var(--color-primary);
+
+  &:hover {
+    border-color: var(--color-primary);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+  }
+}
+
+.outline-primary {
+  color: var(--color-primary);
+  border-color: currentColor;
+
+  &:hover {
+    border-color: currentColor;
+    background-color: rgba(254, 44, 85, 0.06);
+  }
+}
+
+.outline-black {
+  color: var(--text-color);
+  border-color: rgba(22, 24, 35, 0.12);
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+
+  &:hover {
+    border-color: rgba(22, 24, 35, 0.12);
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+
+.outline-none {
+  color: var(--text-color);
+  border-color: transparent;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  background-color: transparent;
+}
+
+//Button size
+.small {
+  min-height: 28px;
+  min-width: 88px;
+}
+
+.large {
+  min-width: 168px;
+  min-height: 48px;
+}
