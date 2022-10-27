@@ -42,8 +42,8 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
       placement="bottom-end"
       interactive
       render={(attrs) => (
-        <div className={cx('action__box')} tabIndex="-1" {...attrs}>
-          <PopperWrapper className={cx('action__list')}>
+        <div className={cx('menu__box')} tabIndex="-1" {...attrs}>
+          <PopperWrapper className={cx('menu__list')}>
             {history.length > 1 && (
               <Header
                 title={current.title}
@@ -52,7 +52,7 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
                 }}
               />
             )}
-            {renderItems()}
+            <div className={cx('menu__list-croll')}>{renderItems()}</div>
           </PopperWrapper>
         </div>
       )}
