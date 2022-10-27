@@ -22,7 +22,7 @@ import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
 import { MessageIcon, NotiIcon } from '~/components/Icons';
 import Image from '~/components/Image';
-import HeaderSearch from './HeaderSearch';
+import HeaderSearch from '~/layouts/components/HeaderSearch';
 const MENU_ITEMS = [
   {
     icon: <FontAwesomeIcon icon={faEarthAsia} />,

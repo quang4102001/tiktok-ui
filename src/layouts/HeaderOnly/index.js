@@ -1,10 +1,11 @@
 import classNames from 'classnames/bind';
+import PropTypes from 'prop-types';
 import styles from './HeaderOnly.module.scss';
 import Header from '~/layouts/components/Header';
 
 const cx = classNames.bind(styles);
 
-function MainLayout({ children }) {
+function HeaderOnly({ children }) {
   return (
     <div className={cx('wrapper')}>
       <Header />
@@ -15,4 +16,8 @@ function MainLayout({ children }) {
   );
 }
 
-export default MainLayout;
+HeaderOnly.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default HeaderOnly;
