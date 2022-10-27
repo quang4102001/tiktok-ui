@@ -1,7 +1,7 @@
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 //Layout
-import { HeaderOnly } from '~/components/Layouts';
+import { HeaderOnly } from '~/layouts';
 
 import Home from '~/pages/Home';
 import Following from '~/pages/Following';
@@ -18,18 +18,18 @@ import Logout from '~/pages/Logout';
 
 //public routes
 export const publicRoutes = [
-  { path: routesConfig.home, component: Home },
-  { path: routesConfig.following, component: Following },
-  { path: routesConfig.profile, component: Profile },
-  { path: routesConfig.upload, component: Live },
-  { path: routesConfig.search, component: Upload, layout: HeaderOnly },
-  { path: routesConfig.live, component: Search, layout: null },
-  { path: routesConfig.feedback, component: Feedback, layout: HeaderOnly },
-  { path: routesConfig.info, component: Info, layout: HeaderOnly },
-  { path: routesConfig.coin, component: Coin, layout: HeaderOnly },
-  { path: routesConfig.studio, component: Studio, layout: HeaderOnly },
-  { path: routesConfig.setting, component: Setting, layout: HeaderOnly },
-  { path: routesConfig.logout, component: Logout, layout: HeaderOnly },
+  { path: config.routes.home, component: Home },
+  { path: config.routes.following, component: Following },
+  { path: config.routes.profile, component: Profile },
+  { path: config.routes.live, component: Live },
+  { path: config.routes.upload, component: Upload, layout: HeaderOnly },
+  { path: config.routes.search, component: Search, layout: null },
+  { path: config.routes.feedback, component: Feedback, layout: HeaderOnly },
+  { path: config.routes.info, component: Info, layout: HeaderOnly },
+  { path: config.routes.coin, component: Coin, layout: HeaderOnly },
+  { path: config.routes.studio, component: Studio, layout: HeaderOnly },
+  { path: config.routes.setting, component: Setting, layout: HeaderOnly },
+  { path: config.routes.logout, component: Logout, layout: HeaderOnly },
 ];
 
 export const privateRoutes = [];

@@ -1,27 +1,27 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faUserGroup, faVideo } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '~/components/Button';
-import styles from './Slidebar.module.scss';
-import routesConfig from '~/config/routes';
+import styles from './Sidebar.module.scss';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
-function Slidebar() {
+function Sidebar() {
   const [mainItemActive, setMainItemActive] = useState('home');
 
   return (
-    <aside className={cx('slidebar')}>
+    <aside className={cx('sidebar')}>
       <div className={cx('main-container')}>
         <ul className={cx('main-container__list')}>
           <li
             className={cx('main-container__item', `${mainItemActive === 'home' ? 'active' : ''}`)}
             onClick={() => setMainItemActive('home')}
           >
-            <Link to={routesConfig.home}>
+            <Link to={config.routes.home}>
               <span className={cx('main-item__icon')}>
                 <FontAwesomeIcon icon={faHouse} />
               </span>
@@ -32,7 +32,7 @@ function Slidebar() {
             className={cx('main-container__item', `${mainItemActive === 'following' ? 'active' : ''}`)}
             onClick={() => setMainItemActive('following')}
           >
-            <Link to={routesConfig.following}>
+            <Link to={config.routes.following}>
               <span className={cx('main-item__icon')}>
                 <FontAwesomeIcon icon={faUserGroup} />
               </span>
@@ -43,7 +43,7 @@ function Slidebar() {
             className={cx('main-container__item', `${mainItemActive === 'live' ? 'active' : ''}`)}
             onClick={() => setMainItemActive('live')}
           >
-            <Link to={routesConfig.live}>
+            <Link to={config.routes.live}>
               <span className={cx('main-item__icon')}>
                 <FontAwesomeIcon icon={faVideo} />
               </span>
@@ -68,4 +68,4 @@ function Slidebar() {
   );
 }
 
-export default Slidebar;
+export default Sidebar;

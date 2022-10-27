@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/services/searchService';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
