@@ -139,12 +139,12 @@
 }
 
 .search__result__user-header {
-  height: 48px;
+  height: 30px;
   display: flex;
   align-items: center;
   color: rgb(133, 133, 133);
   font-size: 1.4rem;
-  padding-left: 16px;
+  padding: 5px 12px;
 }
 
 .search__result__user__list {
@@ -155,9 +155,12 @@
 .search__result__user__item > span {
   display: flex;
   align-items: center;
-  height: 54px;
+  height: 52px;
   padding: 0 20px 0 24px;
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   &:hover {
     background-color: rgba(238, 238, 238, 0.418);
