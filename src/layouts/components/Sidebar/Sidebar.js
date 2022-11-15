@@ -5,8 +5,16 @@ import { Link } from 'react-router-dom';
 import Button from '~/components/Button';
 import styles from './Sidebar.module.scss';
 import config from '~/config';
-import { HomeIcon, UserIcon, CameraIcon } from '~/components/Icons';
+import {
+  HomeIconSolid,
+  UserGroupIconSolid,
+  LiveIconSolid,
+  HomeIconRegular,
+  UserGroupIconRegular,
+  LiveIconRegular,
+} from '~/components/Icons';
 import AccountItem from '~/components/AccountItem';
+import { Menu, MenuItem } from './Menu';
 
 const cx = classNames.bind(styles);
 
@@ -114,35 +122,26 @@ function Sidebar() {
   return (
     <aside className={cx('sidebar')}>
       <div className={cx('main-container')}>
-        <ul className={cx('main-container__list')}>
-          <li
-            className={cx('main-container__item', `${mainItemActive === 'home' ? 'active' : ''}`)}
-            onClick={() => setMainItemActive('home')}
-          >
-            <Link to={config.routes.home}>
-              <HomeIcon className={cx('main-item__icon')} height="3.2rem" width="3.2rem" />
-              <h3 className={cx('main-item__text')}>Dành cho bạn</h3>
-            </Link>
-          </li>
-          <li
-            className={cx('main-container__item', `${mainItemActive === 'following' ? 'active' : ''}`)}
-            onClick={() => setMainItemActive('following')}
-          >
-            <Link to={config.routes.following}>
-              <UserIcon className={cx('main-item__icon')} height="3.2rem" width="3.2rem" />
-              <h3 className={cx('main-item__text')}>Đang Follow</h3>
-            </Link>
-          </li>
-          <li
-            className={cx('main-container__item', `${mainItemActive === 'live' ? 'active' : ''}`)}
-            onClick={() => setMainItemActive('live')}
-          >
-            <Link to={config.routes.live}>
-              <CameraIcon className={cx('main-item__icon')} height="3.2rem" width="3.2rem" />
-              <h3 className={cx('main-item__text')}>LIVE</h3>
-            </Link>
-          </li>
-        </ul>
+        <Menu>
+          <MenuItem
+            iconNonActive={<HomeIconRegular />}
+            iconActive={<HomeIconSolid />}
+            title="Dành cho bạn"
+            to={config.routes.home}
+          />
+          <MenuItem
+            iconNonActive={<UserGroupIconRegular />}
+            iconActive={<UserGroupIconSolid />}
+            title="Đang Follow"
+            to={config.routes.following}
+          />
+          <MenuItem
+            iconNonActive={<LiveIconRegular />}
+            iconActive={<LiveIconSolid />}
+            title="LIVE"
+            to={config.routes.live}
+          />
+        </Menu>
       </div>
       {!currentUser && (
         <div className={cx('main-container')}>
@@ -176,7 +175,6 @@ function Sidebar() {
         </ul>
         <p className={cx('main-container__show-more')}>Xem thêm</p>
       </div>
-      <div className={cx('main-container')}></div>
       <div className={cx('main-container')}></div>
     </aside>
   );

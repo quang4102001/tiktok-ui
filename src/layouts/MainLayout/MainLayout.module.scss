@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  max-width: var(--width-content);
 }
 .container {
   display: flex;
@@ -13,9 +12,10 @@
   max-width: 100%;
 }
 .content {
-  width: calc(var(--width-content) - 356px);
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 356px;
+  height: calc(100vh - var(--height-header));
+  overflow-y: auto;
 }

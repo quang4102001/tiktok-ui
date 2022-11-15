@@ -239,7 +239,7 @@ function Header() {
                 {currentUser ? (
                   <Image
                     className={cx('user-avatar')}
-                    src="https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tiktok-obj/a7ad69aa1cd6be080da40572317b3bca.jpeg?x-expires=1666422000&x-signature=GBrulW4sL8AFWn5DiLFBP5z2szU%3D"
+                    src="https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tiktok-obj/a7ad69aa1cd6be080da40572317b3bca.jpeg?x-expires=1668340800&x-signature=HoENvo82u7PYKAQxY6l%2BJNnDx6E%3D"
                     alt="Quanglala"
                     fallback={images.fallback}
                   />
