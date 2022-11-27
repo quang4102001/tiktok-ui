@@ -1,11 +1,12 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 :root {
   //search
   --border-radius-search: 92px;
 
   //font
-  --primary-font: 'IBM Plex Sans', 'ProximaNova', sans-serif;
+  --primary-font: 'IBM Plex Sans', ProximaNova, sans-serif;
 
   //color
   --color-primary: rgba(254, 44, 85, 1);
@@ -109,6 +110,7 @@ body .tippy-box {
   border-radius: 8px;
   padding: 2px;
   font-size: 1.6rem;
+  color: white;
 }
 
 body .tippy-arrow {

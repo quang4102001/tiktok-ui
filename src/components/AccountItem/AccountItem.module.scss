@@ -1,8 +1,8 @@
 .wrapper {
   display: flex;
   align-items: center;
-  height: 54px;
-  padding: 0 20px 0 24px;
+  height: 60px;
+  padding: 9px 16px;
 
   &:hover {
     background-color: rgba(238, 238, 238, 0.418);
@@ -11,8 +11,8 @@
 }
 
 .avatar {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;

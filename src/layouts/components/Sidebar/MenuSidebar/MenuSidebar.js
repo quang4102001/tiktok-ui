@@ -1,15 +1,15 @@
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 
-import styles from './Menu.module.scss';
+import styles from './MenuSidebar.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Menu({ children }) {
+function MenuSidebar({ children }) {
   return <nav className={cx('menu')}> {children} </nav>;
 }
 
-Menu.propTypes = {
+MenuSidebar.propTypes = {
   children: PropTypes.node.isRequired,
 };
-export default Menu;
+export default MenuSidebar;

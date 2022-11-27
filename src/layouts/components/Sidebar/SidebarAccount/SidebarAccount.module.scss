@@ -1,0 +1,67 @@
+// suggest account
+.text-header {
+  margin-bottom: 8px;
+  padding: 0px 8px;
+}
+
+.user-item__box {
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 8px;
+
+  &:hover {
+    background-color: rgba(238, 238, 238, 0.418);
+    cursor: pointer;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .user-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+
+    .user__id-box {
+      display: flex;
+      align-items: center;
+
+      .user__id {
+        margin-right: 16px;
+        font-weight: 700;
+        font-size: 1.6rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: var(--primary-font);
+      }
+
+      .user__check-icon {
+        font-size: 1.4rem;
+        color: rgb(32, 213, 236);
+      }
+    }
+
+    .user__name {
+      font-weight: thin;
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 1.4rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+}

@@ -49,7 +49,7 @@
 //Button type
 
 .rounded {
-  min-height: 28px;
+  min-height: 34px;
   border-radius: 100px;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
@@ -115,8 +115,9 @@
 
 //Button size
 .small {
-  min-height: 28px;
-  min-width: 88px;
+  border: none;
+  min-height: 34px;
+  min-width: 106px;
 }
 
 .large {

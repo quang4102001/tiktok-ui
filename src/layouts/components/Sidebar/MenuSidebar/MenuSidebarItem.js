@@ -2,11 +2,11 @@ import { NavLink } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import PropTypes from 'prop-types';
 
-import styles from './Menu.module.scss';
+import styles from './MenuSidebar.module.scss';
 
 const cx = classNames.bind(styles);
 
-function MenuItem({ iconActive, iconNonActive, title, to }) {
+function MenuSidebarItem({ iconActive, iconNonActive, title, to }) {
   return (
     <NavLink to={to} className={(nav) => cx('menu-item', { active: nav.isActive })} end>
       <span className={cx('menu-item__icon-active')}>{iconActive}</span>
@@ -15,9 +15,10 @@ function MenuItem({ iconActive, iconNonActive, title, to }) {
     </NavLink>
   );
 }
-MenuItem.propTypes = {
-  icon: PropTypes.node.isRequired,
+MenuSidebarItem.propTypes = {
+  iconActive: PropTypes.node.isRequired,
+  iconNonActive: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
 };
-export default MenuItem;
+export default MenuSidebarItem;

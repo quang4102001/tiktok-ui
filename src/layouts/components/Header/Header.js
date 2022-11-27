@@ -219,17 +219,15 @@ function Header() {
         <div className={cx('header-group-action')}>
           {currentUser ? (
             <>
-              <Tippy content="Tải lên" placement="bottom">
-                <Button outlineBlack leftIcon={<FontAwesomeIcon icon={faPlus} />} to={routesConfig.upload}>
-                  Tải lên
-                </Button>
-              </Tippy>
+              <Button outlineBlack leftIcon={<FontAwesomeIcon icon={faPlus} />} to={routesConfig.upload}>
+                Tải lên
+              </Button>
               <Tippy content="Tin nhắn" placement="bottom">
                 <button className={cx('action-send')}>
                   <MessageIcon className={cx('action-send-icon')} width="2.6rem" height="2.6rem" />
                 </button>
               </Tippy>
-              <Tippy content="Thông báo" placement="bottom">
+              <Tippy content="Hộp thư" placement="bottom">
                 <button className={cx('action-noti')}>
                   <NotiIcon className={cx('action-noti-icon')} width="3.2rem" height="3.2rem" />
                   <span className={cx('action-noti-number')}>13</span>
